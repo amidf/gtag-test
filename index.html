@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LET9YSM009"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LET9YSM009");
+    </script>
   </head>
   <body>
-    <button>Test Click</button>
+    <button class="btn">Test Click</button>
 
-    <script></script>
+    <script>
+      const btn = document.querySelector(".btn");
+
+      btn.addEventListener("click", () => {
+        gtag("event", "test_click_2");
+      });
+    </script>
   </body>
 </html>
